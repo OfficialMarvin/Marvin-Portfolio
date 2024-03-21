@@ -1,67 +1,90 @@
-Compiled with problems:
-×
-ERROR in ./src/style.css (./src/style.css.webpack[javascript/auto]!=!./node_modules/css-loader/dist/cjs.js!./src/style.css)
-Module build failed (from ./node_modules/css-loader/dist/cjs.js):
+{
+margin: 0;
+padding: 0;
+}
+html,
+body {
+overflow: hidden;
+}
 
-SyntaxError
+.webgl {
+position: fixed;
+top: 0;
+left: 0;
+outline: none;
+}
 
-(102:76) /Users/marvin/Documents/Marvin-Portfolio/src/style.css Unknown word
+.jitter {
+animation-duration: 0.3s;
+animation-timing-function: ease-in-out;
+animation-fill-mode: forwards;
+animation-iteration-count: infinite;
+animation-name: jittery;
+z-index: -10;
+}
 
-  100 | "strict": true,
-  101 | "paths": {
-> 102 | "three/examples/jsm/libs/dat.gui.module": ["../node_modules/@types/dat.gui"]
-      |                                                                            ^
-  103 | },
-  104 | "strictPropertyInitialization": false,
-ERROR in ./src/style.css
-Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):
-HookWebpackError: Module build failed (from ./node_modules/css-loader/dist/cjs.js):
+.interface-wrapper {
+width: 100%;
+top: 64px;
+left: 64px;
+}
 
-SyntaxError
+.icon-control-container {
+height: 26.5px;
+width: 26.5px;
+}
 
-(102:76) /Users/marvin/Documents/Marvin-Portfolio/src/style.css Unknown word
+@media only screen and (max-width: 768px) {
+.interface-wrapper {
+width: 100%;
+top: 24px;
+left: 24px;
+}
 
-  100 | "strict": true,
-  101 | "paths": {
-> 102 | "three/examples/jsm/libs/dat.gui.module": ["../node_modules/@types/dat.gui"]
-      |                                                                            ^
-  103 | },
-  104 | "strictPropertyInitialization": false,
+.icon-control-container {
+    height: 19.5px;
+    width: 19.5px;
+}
+}
 
-    at tryRunOrWebpackError (/Users/marvin/Documents/Marvin-Portfolio/node_modules/webpack/lib/HookWebpackError.js:88:9)
-    at __webpack_require_module__ (/Users/marvin/Documents/Marvin-Portfolio/node_modules/webpack/lib/Compilation.js:5241:12)
-    at __webpack_require__ (/Users/marvin/Documents/Marvin-Portfolio/node_modules/webpack/lib/Compilation.js:5198:18)
-    at /Users/marvin/Documents/Marvin-Portfolio/node_modules/webpack/lib/Compilation.js:5270:20
-    at symbolIterator (/Users/marvin/Documents/Marvin-Portfolio/node_modules/neo-async/async.js:3485:9)
-    at done (/Users/marvin/Documents/Marvin-Portfolio/node_modules/neo-async/async.js:3527:9)
-    at Hook.eval [as callAsync] (eval at create (/Users/marvin/Documents/Marvin-Portfolio/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:15:1)
-    at Hook.CALL_ASYNC_DELEGATE [as _callAsync] (/Users/marvin/Documents/Marvin-Portfolio/node_modules/tapable/lib/Hook.js:18:14)
-    at /Users/marvin/Documents/Marvin-Portfolio/node_modules/webpack/lib/Compilation.js:5176:43
-    at symbolIterator (/Users/marvin/Documents/Marvin-Portfolio/node_modules/neo-async/async.js:3482:9)
--- inner error --
-Error: Module build failed (from ./node_modules/css-loader/dist/cjs.js):
+@keyframes jittery {
+10% {
+transform: translate(-0.1px, -0.15px) scale(1, 1);
+}
 
-SyntaxError
+20% {
+    transform: translate(0.15px, 0.1px) scale(1, 1);
+}
 
-(102:76) /Users/marvin/Documents/Marvin-Portfolio/src/style.css Unknown word
+30% {
+    transform: translate(-0.2px, -0.25px) scale(1, 1);
+}
 
-  100 | "strict": true,
-  101 | "paths": {
-> 102 | "three/examples/jsm/libs/dat.gui.module": ["../node_modules/@types/dat.gui"]
-      |                                                                            ^
-  103 | },
-  104 | "strictPropertyInitialization": false,
+40% {
+    transform: translate(0.05px, 0.1px) scale(1, 1);
+}
 
-    at Object.<anonymous> (/Users/marvin/Documents/Marvin-Portfolio/node_modules/css-loader/dist/cjs.js!/Users/marvin/Documents/Marvin-Portfolio/src/style.css:1:7)
-    at /Users/marvin/Documents/Marvin-Portfolio/node_modules/webpack/lib/javascript/JavascriptModulesPlugin.js:452:10
-    at Hook.eval [as call] (eval at create (/Users/marvin/Documents/Marvin-Portfolio/node_modules/tapable/lib/HookCodeFactory.js:19:10), <anonymous>:7:1)
-    at Hook.CALL_DELEGATE [as _call] (/Users/marvin/Documents/Marvin-Portfolio/node_modules/tapable/lib/Hook.js:14:14)
-    at /Users/marvin/Documents/Marvin-Portfolio/node_modules/webpack/lib/Compilation.js:5243:39
-    at tryRunOrWebpackError (/Users/marvin/Documents/Marvin-Portfolio/node_modules/webpack/lib/HookWebpackError.js:83:7)
-    at __webpack_require_module__ (/Users/marvin/Documents/Marvin-Portfolio/node_modules/webpack/lib/Compilation.js:5241:12)
-    at __webpack_require__ (/Users/marvin/Documents/Marvin-Portfolio/node_modules/webpack/lib/Compilation.js:5198:18)
-    at /Users/marvin/Documents/Marvin-Portfolio/node_modules/webpack/lib/Compilation.js:5270:20
-    at symbolIterator (/Users/marvin/Documents/Marvin-Portfolio/node_modules/neo-async/async.js:3485:9)
+50% {
+    transform: translate(-0.025px, -0.05px) scale(1, 1);
+}
 
-Generated code for /Users/marvin/Documents/Marvin-Portfolio/node_modules/css-loader/dist/cjs.js!/Users/marvin/Documents/Marvin-Portfolio/src/style.css
-1 | throw new Error("Module build failed (from ./node_modules/css-loader/dist/cjs.js):\n\nSyntaxError\n\n(102:76) /Users/marvin/Documents/Marvin-Portfolio/src/style.css Unknown word\n\n \u001b[90m 100 | \u001b[39m\u001b[32m\"strict\"\u001b[39m\u001b[33m:\u001b[39m true,\n \u001b[90m 101 | \u001b[39m\u001b[32m\"paths\"\u001b[39m\u001b[33m:\u001b[39m \u001b[33m{\u001b[39m\n\u001b[1m\u001b[31m>\u001b[39m\u001b[22m\u001b[90m 102 | \u001b[39m\u001b[32m\"three/examples/jsm/libs/dat.gui.module\"\u001b[39m\u001b[33m:\u001b[39m \u001b[33m[\u001b[39m\u001b[32m\"../node_modules/@types/dat.gui\"\u001b[39m\u001b[33m]\u001b[39m\n \u001b[90m     | \u001b[39m                                                                           \u001b[1m\u001b[31m^\u001b[39m\u001b[22m\n \u001b[90m 103 | \u001b[39m\u001b[33m}\u001b[39m,\n \u001b[90m 104 | \u001b[39m\u001b[32m\"strictPropertyInitialization\"\u001b[39m\u001b[33m:\u001b[39m false,\n");
+60% {
+    transform: translate(0px, 0.075px) scale(1, 1);
+}
+
+70% {
+    transform: translate(-0.075px, -0.1px) scale(1, 1);
+}
+
+80% {
+    transform: translate(0.075px, 0.125px) scale(1, 1);
+}
+
+90% {
+    transform: translate(-0.125px, -0.075px) scale(1, 1);
+}
+
+100% {
+    transform: translate(0.075px, 0.025px) scale(1, 1);
+}
+}
