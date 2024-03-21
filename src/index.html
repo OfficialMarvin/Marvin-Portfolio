@@ -1,101 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marvin Jakobs - Portfolio</title>
-  <meta name="title" content="Marvin Jakobs - Software Engineer">
-  <meta name="description" content="I'm Marvin, a Data Science and Machine Learning enthusiast based in Pennsylvania. Penn State University Graduate with a B.S. in Data Sciences, currently seeking full-time opportunities.">
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://marvinjakobs.com/">
-  <meta property="og:title" content="Marvin Jakobs - Software Engineer">
-  <meta property="og:description" content="I'm Marvin, a Data Science and Machine Learning enthusiast based in Pennsylvania. Penn State University Graduate with a B.S. in Data Sciences, currently seeking full-time opportunities.">
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://marvinjakobs.com/">
-  <meta name="twitter:url" content="https://marvinjakobs.com/">
-  <meta property="twitter:title" content="Marvin Jakobs - Software Engineer">
-  <meta name="twitter:title" content="Marvin Jakobs - Software Engineer">
-  <meta property="twitter:description" content="I'm Marvin, a Data Science and Machine Learning enthusiast based in Pennsylvania. Penn State University Graduate with a B.S. in Data Sciences, currently seeking full-time opportunities.">
-  <meta name="twitter:description" content="I'm Marvin, a Data Science and Machine Learning enthusiast based in Pennsylvania. Penn State University Graduate with a B.S. in Data Sciences, currently seeking full-time opportunities.">
-  <meta property="twitter:image" content="https://marvinjakobs.com/images/preview-new.jpg">
-  <meta name="twitter:image" content="https://marvinjakobs.com/images/preview-new.jpg">
-  <!-- Images -->
-  <meta property="og:image" content="https://marvinjakobs.com/images/preview-new.jpg">
-  <meta property="og:image:secure" content="https://marvinjakobs.com/images/preview-new.jpg">
-  <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4FJBF6WF60"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-4FJBF6WF60');
-  </script>
-</head>
-<body>
-  <div id="css"></div>
-  <div id="webgl"></div>
-  <div id="overlay"></div>
-  <div id="ui-interactive">
-    <!-- Projects -->
-    <section>
-      <h2>Top Projects</h2>
-      <ul>
-        <li>
-          <h3>Blockchain Battleship</h3>
-          <p>Developed a decentralized game on Ethereum with Solidity and JavaScript. Features included real-time messaging and gameplay mechanics, with a focus on smart contract security and frontend interaction via Web3.js.</p>
-        </li>
-        <li>
-          <h3>Stock Trend Prediction</h3>
-          <p>Utilized sentiment analysis on tweets and historical stock data to predict stock trends with a model accuracy of 51%. Implemented data processing and machine learning models in Databricks, employing VADER for sentiment analysis.</p>
-        </li>
-        <li>
-          <h3>Brain Tumor Classification</h3>
-          <p>Developed machine learning models for grading gliomas using imaging and genomic data, emphasizing algorithm selection and model accuracy. Used datasets from UC Irvine and TCGA, tested SVM, Random Forest, and neural networks.</p>
-        </li>
-      </ul>
-    </section>
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <style> body { background-color: rgb(0, 0, 0); margin: 0; }
+css
+Copy
+#webgl {
+pointer-events: none;
+}
 
-    <!-- Experience -->
-    <section>
-      <h2>Employment History</h2>
-      <ul>
-        <li>
-          <h3>AmerisourceBergen</h3>
-          <p>Customer Relationship Management Intern (Jun 2022 - Aug 2022)</p>
-          <p>Worked with the IT team to export and document metadata and UI/UX for multiple permission sets in production. Gave suggestions for field and flow updates. Became proficient in Salesforce and used SQL and Excel.</p>
-        </li>
-        <li>
-          <h3>Save the Martians NFT</h3>
-          <p>Remote Community Tech Manager (Sep 2021 - May 2022)</p>
-          <p>Was responsible for tasks such as automating and maintaining bots, providing cross-chain support, web development, creating multi-media, etc. Worked with people globally to create an NFT with fun utility.</p>
-        </li>
-        <li>
-          <h3>College of IST, Penn State</h3>
-          <p>Remote Summer Research Assistance (May 2021 - Sep 2021)</p>
-          <p>Researched anomalies in global wildlife trade and illegal seizure data using Python tools. Cleaned and spatially clustered data to recognize patterns and modus operandi of poachers/illegal wildlife traders.</p>
-        </li>
-        <li>
-          <h3>App Developer Freelance</h3>
-          <p>Remote Freelance (2018 - 2020)</p>
-          <p>Developed and sold both iOS and Android apps. Used Unity with C sharp for Amazon, and XCode with C++ for iOS. Auctioned the rights to several apps on Flippa, used Google AdSense, and ran Instagram ads to market.</p>
-        </li>
-      </ul>
-    </section>
-  </div>
-  <div id="ui">
-    <!-- Placeholder for digital art and NFTs -->
-    <section>
-      <h2>Digital Art and NFTs</h2>
-      <p>This section will showcase my digital artwork and NFT creations.</p>
-    </section>
-  </div>
-  <div id="monitor-videos">
-    <video id="video-1" muted loop autoplay width="0" height="0" src="../static/textures/monitor/video/base-static.mp4" style="opacity: 0;"></video>
-    <video id="video-2" muted loop autoplay width="0" height="0" src="../static/textures/monitor/video/static-texture-layer.mp4" style="opacity: 0;"></video>
-  </div>
-</body>
-</html>
+#ui-app {
+width: 100%;
+height: 100%;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+}
+
+#ui {
+position: absolute;
+overflow: hidden;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+}
+
+#monitor-videos {
+pointer-events: none;
+position: 'absolute';
+opacity: 0;
+width: 0;
+height: 0;
+top: 0;
+left: 0;
+
+}
+
+#css {
+cursor: pointer;
+}
+
+#ui-interactive {
+position: absolute;
+top: 0;
+left: 0;
+width: 256px;
+}
+
+video {
+position: absolute;
+top: 0;
+pointer-events: none;
+}
+</style> <!-- Primary Meta Tags --> <title>Henry Heffernan - Portfolio 2022</title> <meta name="title" content="Henry Heffernan - Software Engineer"> <meta name="description" content="I'm Henry, a Software Engineer based in NY. Rensselaer Polytechnic Institute Graduate with my B.S. in Computer Science, currently looking for a full time role."> <!-- Open Graph / Facebook --> <meta property="og:type" content="website"> <meta property="og:url" content="https://henryheffernan.com/"> <meta property="og:title" content="Henry Heffernan - Software Engineer"> <meta property="og:description" content="I'm Henry, a Software Engineer based in NY. Rensselaer Polytechnic Institute Graduate with my B.S. in Computer Science, currently looking for a full time role."> <!-- Twitter --> <meta property="twitter:card" content="summary_large_image"> <meta name="twitter:card" content="summary_large_image"> <meta property="twitter:url" content="https://henryheffernan.com/"> <meta name="twitter:url" content="https://henryheffernan.com/"> <meta property="twitter:title" content="Henry Heffernan - Software Engineer"> <meta name="twitter:title" content="Henry Heffernan - Software Engineer">
+<meta property="twitter:description" content="I'm Henry, a Software Engineer based in NY. Rensselaer Polytechnic Institute Graduate with my B.S. in Computer Science, currently looking for a full time role.">
+<meta name="twitter:description" content="I'm Henry, a Software Engineer based in NY. Rensselaer Polytechnic Institute Graduate with my B.S. in Computer Science, currently looking for a full time role.">
+
+<meta property="twitter:image" content="https://henryheffernan.com/images/preview-new.jpg"> <meta name="twitter:image" content="https://henryheffernan.com/images/preview-new.jpg"> <!-- Images --> <meta property="og:image" content="https://henryheffernan.com/images/preview-new.jpg"> <meta property="og:image:secure" content="https://henryheffernan.com/images/preview-new.jpg"> <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon"> <!-- Global site tag (gtag.js) - Google Analytics --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-4FJBF6WF60"></script> <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-4FJBF6WF60'); </script> </head> <body> <div id="css"></div> <div id="webgl"></div> <div id="overlay"></div> <div id="ui-interactive"></div> <div id="ui"></div> <div id="monitor-videos"> <video id="video-1" muted loop autoplay width="0" height="0" src="../static/textures/monitor/video/base-static.mp4" style="opacity: 0;"></video> <video id="video-2" muted loop autoplay width="0" height="0" src="../static/textures/monitor/video/static-texture-layer.mp4" style="opacity: 0;"></video> </div> </body> </html>
+script.ts:
+import './style.css';
+
+import Application from './Application/Application';
+
+const app: Application = new Application();
